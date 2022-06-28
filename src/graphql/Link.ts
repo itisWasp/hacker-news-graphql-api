@@ -65,20 +65,6 @@ export const Link = objectType({
   },
 });
 
-let links: NexusGenObjects["Link"][] = [
-  // 1
-  {
-    id: 1,
-    url: "www.howtographql.com",
-    description: "Fullstack tutorial for GraphQL",
-  },
-  {
-    id: 2,
-    url: "graphql.org",
-    description: "GraphQL official website",
-  },
-];
-
 export const LinkQuery = extendType({
   type: "Query",
   definition(t) {

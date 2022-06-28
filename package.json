@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --transpile-only --no-notify --exit-child src/index.ts",
-    "generate": "ts-node --transpile-only src/schema.ts"
+    "generate": "ts-node --transpile-only src/schema",
+    "migrate:deploy": "prisma db push",
+    "build": "prisma generate && yarn generate && tsc",
+    "start": "node dist/src/index.js"
   },
   "devDependencies": {
     "@types/bcryptjs": "~2.4.0",
